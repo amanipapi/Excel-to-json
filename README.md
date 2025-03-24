@@ -3,14 +3,15 @@ This tool processes Excel files with student data and converts them to clean JSO
 
 ## 📁 Project Structure
 
-project/ 
-    ├── original_excel/ # original source files 
-    ├── xlsx/ # Excel source files 
-    ├── json/ # Output JSON files 
-    ├── loading_json_v2.py # Main script 
-    ├── remane_xlsx.py # Renaming script
-    ├── .gitignore 
-    └── README.md
+project/   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ├── original_excel/ # original source files   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ├── xlsx/ # Excel source files   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├── json/ # Output JSON files       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├── attend_json/ # Output JSON files for attendace   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ├── loading_json_v2.py # Main script   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├── remane_xlsx.py # Renaming script  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├── .gitignore   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    └── README.md  
 
 
 ## 🚀 Features
@@ -22,23 +23,23 @@ project/
 - Outputs JSON in `json/` folder
 
 ## 🔧 Usage
-Create a virtual enviroment using bash or any terminal
-    python -m venv myenv
-activate the venv
-    activate myenv/Scripts/activate
-Create folders
-    original_excel
-    xlsx
-using bash or any terminal
-    python rename-xlsx.py
-    python loading_json_v2.py
+Create a virtual enviroment using bash or any terminal  
+&nbsp;&nbsp;&nbsp;&nbsp;    python -m venv myenv  
+activate the venv  
+&nbsp;&nbsp;&nbsp;&nbsp;    activate myenv/Scripts/activate  
+Create folders  
+&nbsp;&nbsp;&nbsp;&nbsp;    original_excel  
+&nbsp;&nbsp;&nbsp;&nbsp;    xlsx  
+using bash or any terminal  
+&nbsp;&nbsp;&nbsp;&nbsp;    python rename-xlsx.py  
+&nbsp;&nbsp;&nbsp;&nbsp;    python loading_json_v2.py  
 Make sure Excel files are placed inside the original_excel/ folder before running the script.
 
 ## 📦 Requirements
 
-Python 3.7+
-pandas
-openpyxl
+Python 3.7+  
+pandas  
+openpyxl  
 
 ## Install dependencies
 
