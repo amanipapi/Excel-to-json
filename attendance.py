@@ -16,7 +16,7 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 excel_files = [f for f in os.listdir(INPUT_FOLDER) if f.endswith('.xlsx')]
 
 for excel_file in excel_files:
-    print(f"\n📂 Processing file: {excel_file}")
+    print(f"\nProcessing file: {excel_file}")
     excel_path = os.path.join(INPUT_FOLDER, excel_file)
     xls = pd.ExcelFile(excel_path)
 
@@ -25,10 +25,10 @@ for excel_file in excel_files:
 
     for sheet_name in xls.sheet_names:
         if any(keyword in sheet_name.lower() for keyword in SKIP_KEYWORDS):
-            print(f"⏭️ Skipping sheet: {sheet_name}")
+            print(f"Skipping sheet: {sheet_name}")
             continue
 
-        print(f"🔍 Reading topic: {sheet_name}")
+        print(f"Reading topic: {sheet_name}")
         try:
             df = pd.read_excel(xls, sheet_name=sheet_name, header=HEADER_ROW_INDEX,
                                dtype={"Phone Number": str})
@@ -76,6 +76,6 @@ for excel_file in excel_files:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(file_data, f, indent=4, ensure_ascii=False)
 
-        print(f"✅ Saved: {output_path}")
+        print(f"Saved: {output_path}")
     else:
-        print(f"⚠️ No valid data found in {excel_file}")
+        print(f"!!No valid data found in {excel_file}")
